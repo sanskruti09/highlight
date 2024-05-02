@@ -35,7 +35,7 @@ class TestPDF(unittest.TestCase):
         highlighter = Factory.create("pdf")
 
         highlights = [
-            ("Basic", "The following terms and conditions apply to the International"),
+            ("Basic", "Checksums are usedto validate"),
             ("Multi-line", "Hashes are used to secure. Hashes can be deterministic or non-deterministic. Hashes can be significantly " +
              "different with small changes to data or very similar."),
             ("Regex", "This article.*Python"),
