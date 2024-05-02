@@ -42,7 +42,7 @@ class TestPDF(unittest.TestCase):
             ("Regex Multi-line", "The above(.|\n)+is deterministic"),
             (None, "Python provides the built-in .hash()")]
 
-        annotations = highlighter.highlight(self.path("C:\Users\Sanskruti Kekan\Documents\ISOSGT.pdf"), self.path("out.pdf"), highlights)
+        annotations = highlighter.highlight(self.path("https://drive.google.com/file/d/1sDpR-ILzANIJ9oXJXFy-dZ_MZCCmaBzV/view?usp=drive_link"), self.path("out.pdf"), highlights)
 
         # Check annotations created
         self.assertEqual(len(annotations), 5)
