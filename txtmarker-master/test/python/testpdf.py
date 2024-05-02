@@ -35,14 +35,14 @@ class TestPDF(unittest.TestCase):
         highlighter = Factory.create("pdf")
 
         highlights = [
-            ("Basic", "Hashing is a key part"),
+            ("Basic", "The following terms and conditions apply to the International"),
             ("Multi-line", "Hashes are used to secure. Hashes can be deterministic or non-deterministic. Hashes can be significantly " +
              "different with small changes to data or very similar."),
             ("Regex", "This article.*Python"),
             ("Regex Multi-line", "The above(.|\n)+is deterministic"),
             (None, "Python provides the built-in .hash()")]
 
-        annotations = highlighter.highlight(self.path("hash.pdf"), self.path("out.pdf"), highlights)
+        annotations = highlighter.highlight(self.path("C:\Users\Sanskruti Kekan\Documents\ISOSGT.pdf"), self.path("out.pdf"), highlights)
 
         # Check annotations created
         self.assertEqual(len(annotations), 5)
@@ -105,3 +105,5 @@ class TestPDF(unittest.TestCase):
         elements = [(x, x) for x in ["This is a hyph-\n", "en test\n"]]
 
         self.assertEqual(highlighter.text(elements), "This is a\nhyphen test\n")
+
+    
